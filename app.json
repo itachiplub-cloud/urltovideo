@@ -1,0 +1,44 @@
+{
+  "name": "urltovideo-bot",
+  "description": "Telegram URL To Video Downloader Bot using yt-dlp",
+  "repository": "https://github.com/itachiplub-cloud/urltovideo",
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash from my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot Token from @BotFather",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "MongoDB connection URI",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram user ID",
+      "required": true
+    },
+    "YUKI_API_URL": {
+      "description": "Yuki Storage API URL (optional)",
+      "required": false
+    },
+    "YUKI_UPLOAD_ENDPOINT": {
+      "description": "Yuki Storage upload endpoint (optional)",
+      "required": false,
+      "value": "/upload"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
